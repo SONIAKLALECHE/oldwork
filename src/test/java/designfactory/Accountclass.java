@@ -1,0 +1,29 @@
+package designfactory;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Accountclass {
+	
+	
+	
+WebDriver driver;
+	
+	public Accountclass(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+		
+	}
+	
+	@FindBy(linkText="Account")
+	private WebElement account;
+	
+	public WebElement account() {
+		
+		
+		return account;
+
+	}
+}
